@@ -9,6 +9,7 @@
     - Seletor de ID: Seleciona um único elemento com u =m determinado ID (ex: #meu-id)
     - Seletor de Classe: Seleciona todos os elementos com uma determinada classe (ex: .minha-classe)
     - Seletor por Atributo: Seleciona elementos com um determinado atributo (ex: [type="text"])
+    - Seletor de Pseudo-classe: Seleciona elementos em um estado específico (ex: a:hover)
 **/
 
 *{
@@ -30,5 +31,12 @@ p {
 }
 
 [for="nome"], [type="submit"] {
-    color: darkcyan;
+    color: magenta;
+}
+
+#botao2[type="submit"]:hover {
+    background-color: magenta;
+    color: white;
+    border-radius: 5%;
+    font-size: 40px;
 }
