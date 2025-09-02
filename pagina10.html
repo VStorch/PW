@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #item {
+            height: 15vw;
+            width: 15vw;
+            position: fixed;
+        }
+
+        #item {
+            animation: movimento 5s none 0s infinite;
+        }
+
+        @keyframes movimento {
+            0% {
+                top: 0px;
+                left: 0px;
+                background-color: red;
+            }
+            25% {
+                top: 0px;
+                left: 1650px;
+                background-color: chartreuse;
+            }
+            50% {
+                top: 656px;
+                left: 1650px;
+                background-color: blue;
+            }
+            75% {
+                top: 656px;
+                /**bottom: 0px;**/
+                left: 0px;
+                background-color: darkcyan;
+            }
+            100% {
+                top: 0px;
+                left: 0px;
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="item"></div>
+</body>
+</html>
