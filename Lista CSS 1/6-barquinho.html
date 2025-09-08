@@ -11,13 +11,25 @@
         }
         #céu {
             background-image: url(img/Céu.png);
-            height: 50vw;
+            height: 40vw;
             width: 100vw;
-            background-size: 100vw 50vw;
+            background-size: 100vw 40vw;
+            z-index: 0;
         }
         #mar {
-            background-color: blue;
+            background-color: rgb(37, 44, 249);
             height: 20vw;
+            z-index: 0;
+        }
+        #nuvem {
+            position: absolute;
+            background-color: white;
+            top: 50px;
+            width: 400px;
+            height: 150px;
+            border-radius: 40px;
+            box-shadow: 4px 10px rgb(210, 210, 210);
+            z-index: 1;
         }
         @keyframes identifier {
             
@@ -26,6 +38,7 @@
 </head>
 <body>
     <div id="céu"></div>
-    <div id="mar">1</div>
+    <div id="mar"></div>
+    <div id="nuvem"></div>
 </body>
 </html>
