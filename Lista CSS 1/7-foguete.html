@@ -9,21 +9,38 @@
             padding: 0;
             margin: 0;
         }
+        body {
+            position: relative;
+        }
         #espaço {
             position: relative;
             background-image: linear-gradient(to top, white, rgb(13, 1, 1) 30%);
             height: 60vw;
             width: 100vw;
+            z-index: 0;
         }
         #céu {
             background-image: url(img/Céu.png);
             height: 50vw;
             width: 100vw;
             background-size: 100vw 50vw;
+            z-index: 0;
         }
         #chão {
             background-color: rgb(119, 202, 36);
             height: 20vw;
+            z-index: 0;
+        }
+        #foguetinho {
+            position: absolute;
+            background-image: url(img/Foguetinho.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 60px;
+            width: 100px;
+            bottom: 300px;
+            left: 50%;
+            z-index: 2;
         }
         @keyframes identifier {
             
@@ -39,6 +56,7 @@
     <div id="espaço"></div>
     <div id="céu"></div>
     <div id="chão"></div>
+    <div id="foguetinho"></div>
 </body>
 </html>
     <!--Fazer um foguetinho subindo para cima com fumaça e nuvens se mexendo-->
