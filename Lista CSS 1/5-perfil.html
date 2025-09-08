@@ -41,8 +41,35 @@
         #barra #nome {
             padding-top: 20px;
         }
-        #cont{}
-        h1, h3, p {
+        #cont {
+            display: inline-block;
+            vertical-align: top;
+            padding: 35px;  
+        }
+        h1 {
+            padding-bottom: 15px;
+        }
+        h3 {
+            padding-bottom: 15px;
+            padding-top: 20px;
+
+        }
+        p {
+            padding-top: 18px;
+        }
+        #data {
+            padding-top: 18px;
+            float: right;
+            color: rgb(112, 112, 112);
+        }
+        #exp {
+            display: block;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+        li {
+            padding-top: 10px;
+            padding-left: 5px;
         }
     </style>
 </head>
@@ -70,12 +97,25 @@
     <div id="cont">
         <h1><strong>Vinícius Storch</strong></h1>
 
+        <hr>
+
         <p>Sou desenvolvedor de sistemas em formação, com paixão por minha área e grande apreço pela lógica formal, algo que se reflete nos meus trabalhos.</p>
         <p>Possuo conhecimento nas áreas de back-end e front-end, contudo, me identifico mais com a primeira.</p>
 
         <h3>Formação Acadêmica</h3>
-        <span>2023-2025</span> <!-- Alinhar com a margem direita -->
+        
+        <hr>
+        
+        <span id="data">2023-2025</span>
         <p>Curso Técnico Integrado em Informática. Pelo Instituto Federal de Santa Catarina (IFSC) – Câmpus Gaspar.</p>
+        <span id="exp">Com experiência em:</span>
+        <ul>
+            <li>Java Swing</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Flutter</li>
+            <li>Git e GitHub</li>
+        </ul>
     </div>
 </body>
 </html>
