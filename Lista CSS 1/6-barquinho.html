@@ -17,9 +17,30 @@
             z-index: 0;
         }
         #mar {
-            background-color: rgb(37, 44, 249);
+            position: relative;
             height: 20vw;
             z-index: 0;
+            background-image: linear-gradient(to top, darkblue, rgb(37, 44, 249));
+        }
+        #mar::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.41);
+            border-radius: 50% 50% 0 0;
+        }
+        #mar::after {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.644);
+            border-radius: 50% 50% 0 0;
         }
         #nuvem {
             position: absolute;
@@ -39,8 +60,45 @@
             bottom: 160px;
             z-index: 2;
         }
-        @keyframes identifier {
-            
+
+        /** Animações implementadas **/
+
+        #barquinho {
+            animation: barcoMov 10s none 0s infinite;
+        }
+        #nuvem {
+            animation: nuvemMov 50s none 0s infinite;
+        }
+
+        @keyframes barcoMov {
+            0% {
+                bottom: 160px;
+                left: 0px;
+            }
+            25% {
+                bottom: 150px;
+                left: 25vw;
+            }
+            50% {
+                bottom: 160px;
+                left: 50vw;
+            }
+            75% {
+                bottom: 150px;
+                left: 75vw;
+            }
+            100% {
+                bottom: 160px;
+                left: 90vw;
+            }
+        }
+        @keyframes nuvemMov {
+            0% {
+                left: 0vw;
+            }
+            100% {
+                left: 80vw;
+            }
         }
     </style>
 </head>
