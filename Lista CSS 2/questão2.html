@@ -5,34 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        #interface {
+            height: 70dvh;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
         h3{
             color: lightgray;
+            margin-bottom: 50px;
         }
         .box {
             background-color: lightgray;
             width: 250px;
             height: 25px;
             border-radius: 5px;
+            margin: 7px;
         }
         #circulo {
             background-color: lightgray;
             width: 70px;
             height: 70px;
             border-radius: 50%;
+            margin-top: 100px;
         }
         #item6 {
+            margin: 20px;
             width: 150px;
         }
     </style>
 </head>
 <body>
-    <h3>Company Logo</h3>
-    <div class="box" id="item1"></div>
-    <div class="box" id="item2"></div>
-    <div class="box" id="item3"></div>
-    <div class="box" id="item4"></div>
-    <div class="box" id="item5"></div>
-    <div id="circulo"></div>
-    <div class="box" id="item6"></div>
+    <div id="interface">
+        <h3>Company Logo</h3>
+        <div class="box" id="item1"></div>
+        <div class="box" id="item2"></div>
+        <div class="box" id="item3"></div>
+        <div class="box" id="item4"></div>
+        <div class="box" id="item5"></div>
+        <div id="circulo"></div>
+        <div class="box" id="item6"></div>
+    </div>
 </body>
 </html>
