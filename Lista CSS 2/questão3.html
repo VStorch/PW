@@ -6,20 +6,64 @@
     <title>Document</title>
     <style>
         #interface {
-            height: 70dvh;
+            height: 80dvh;
             display: flex;
             flex-flow: column;
             align-items: center;
+        }
+        .usuarios {
+            width: 100%;
+            max-width: 400px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .img {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+        #img1 {
+            background-image: url(img/Arthur.jpeg);
+        }
+        #img2 {
+            background-image: url(img/Daniel.jpeg);
+        }
+        #img3 {
+            background-image: url(img/Leonardo.jpeg);
+        }
+        #img4 {
+            background-image: url(img/Rosa.jpg);
+        }
+        hr {
+            width: 100%;
+            max-width: 400px;
         }
     </style>
 </head>
 <body>
     <div id="interface">
-        <div class="usuarios" id="item1">1</div>
-        <div class="usuarios" id="item2">2</div>
-        <div class="usuarios" id="item3">3</div>
-        <div class="usuarios" id="item4">4</div>
-        <div class="usuarios" id="item5">5</div>
+        <div class="usuarios" id="item1">
+            <div class="img" id="img1"></div>
+            Arthur Pereira
+        </div>
+        <hr>
+        <div class="usuarios" id="item2">
+            <div class="img" id="img2"></div>
+            Daniel Stamm Pessoa de Oliveira
+        </div>
+        <hr>
+        <div class="usuarios" id="item3">
+            <div class="img" id="img3"></div>
+            Leonardo Cortelim dos Santos
+        </div>
+        <hr>
+        <div class="usuarios" id="item4">
+            <div class="img" id="img4"></div>
+            Gustavo Grocelli Rosa
+        </div>
+        
     </div>
 </body>
 </html>
