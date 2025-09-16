@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: greenyellow;
+            height: 100px;
+            display: flex;
+            padding: 20px;
+        }
+        #centro {
+            display: flex;
+            min-height: calc(100vh - 200px);
+        }
+        article {
+            flex: 2;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        aside {
+            flex: 0.5;
+            background-color: bisque;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        nav {
+            flex: 0.5;
+            background-color: lightgreen;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <div id="centro">
+        <article>Article</article>
+        <aside>Aside</aside>
+        <nav>Nav</nav>
+    </div>
+    <footer>Footer</footer>
+</body>
+</html>
