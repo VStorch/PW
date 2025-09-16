@@ -20,6 +20,10 @@
             border-bottom-left-radius: 70px;
             border-top-left-radius: 70px;
             border-top-right-radius: 70px;
+            position: relative;
+        }
+        .fotos:hover {
+            width: 50dvh;
         }
         #j1 {
             background-image: url(img_q4/JurassicPark.jpg);
@@ -33,14 +37,58 @@
         #j4 {
             background-image: url(img_q4/JurassicWorld.png);
         }
+        #j5 {
+            background-image: url(img_q4/JWFK.png);
+        }
+        .icones {
+            height: 60px;
+            width: 60px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #j1:hover .icones {
+            background-color: red;
+        }
+        #j2:hover .icones {
+            background-color: darkred;
+        }
+        #j3:hover .icones {
+            background-color: red;
+        }
+        #j4:hover .icones {
+            background-color: cadetblue
+        }
+        #j5:hover .icones {
+            background-color: dimgray;
+        }
     </style>
 </head>
 <body>
     <div id="layout">
-        <div class="fotos" id="j1"></div>
-        <div class="fotos" id="j2"></div>
-        <div class="fotos" id="j3"></div>
-        <div class="fotos" id="j4"></div>
+        <div class="fotos" id="j1">
+            <img src="img_q4/JPLogo.png" alt="" class="icones" id="icone1">
+        </div>
+        <div class="fotos" id="j2">
+            <img src="img_q4/JPLogo.png" alt="" class="icones">
+        </div>
+        <div class="fotos" id="j3">
+            <img src="img_q4/JP3Logo.png" alt="" class="icones">
+        </div>
+        <div class="fotos" id="j4">
+            <img src="img_q4/JPLogo.png" alt="" class="icones">
+
+        </div>
+        <div class="fotos" id="j5">
+            <img src="img_q4/JPLogo.png" alt="" class="icones">
+
+        </div>
     </div>
 </body>
 </html>
