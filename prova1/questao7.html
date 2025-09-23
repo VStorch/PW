@@ -4,8 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        html, body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .box{
+            display: inline-block;
+            height: 10vw;
+            width: 10vw;
+            border-radius: 50%;
+        }
+        #item1 {
+            background-color: lightcoral;
+        }
+        #item2 {
+            background-color: lightskyblue;
+        }
+        #item3 {
+            background-color: yellow;
+        }
+        #item4 {
+            background-color: green;
+        }
+        #item5 {
+            background-color: purple;
+        }
+
+        #item2 {position: fixed; right: 0px;}
+        #item3 {position: fixed; right: 0px; bottom: 0px;}
+        #item4 {position: fixed; left: 0px; bottom: 0px;}
+        #item5 {position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+
+        #item1 {
+            animation: rotacao1 5s none 0s infinite;
+        }
+
+        @keyframes rotacao1 {
+            0% {
+                right: 0px;
+            }
+            99% {
+                right: 1600px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="item1" class="box"></div>
+    <div id="item2" class="box"></div>
+    <div id="item3" class="box"></div>
+    <div id="item4" class="box"></div>
+    <div id="item5" class="box"></div>
 </body>
 </html>
