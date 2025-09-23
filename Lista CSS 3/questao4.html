@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header, #right { background-color: gold; }
+        footer, #main { background-color: lightskyblue; }
+        #left, #low { background-color: green; }
+        #banner { background-color: lightcoral; }
+
+        #layout {
+            display: grid;
+            height: 100vh;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        @media screen and (max-width: 437px) and (max-height: 873px) {
+            #layout {
+                grid-template-areas:
+                "h"
+                "b"
+                "l"
+                "m"
+                "r"
+                "lo"
+                "f";
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 8fr 1fr 1fr 1fr;
+            }
+            header {
+                grid-area: h;
+            }
+            #banner {
+                grid-area: b;
+            }
+            #left {
+                grid-area: l;
+            }
+            #main {
+                grid-area: m;
+            }
+            #right {
+                grid-area: r;
+            }
+            #low{
+                grid-area: lo;
+            }
+            footer {
+                grid-area: f;
+            }
+        }
+        @media screen and (min-width: 438px) and (min-height: 874px){
+            #layout {
+                grid-template-areas:
+                "h h h"
+                "l b r"
+                "l m r"
+                "l lo r"
+                "f f f";
+                grid-template-columns: 0.8fr 3fr 0.8fr;
+                grid-template-rows: 1fr 0.8fr 7fr 0.8fr 1fr;
+            }
+            header {
+                grid-area: h;
+            }
+            #left {
+                grid-area: l;
+            }
+            #banner {
+                grid-area: b;
+            }
+            #main {
+                grid-area: m;
+            }
+            #low{
+                grid-area: lo;
+            }
+
+            #right {
+                grid-area: r;
+            }
+            footer {
+                grid-area: f;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="layout">
+        <header>Header</header>
+        <div id="left">Left Aside</div>
+        <div id="banner">Banner</div>
+        <div id="main">Main Content</div>
+        <div id="right">Right Aside</div>
+        <div id="low">Low Content</div>
+        <Footer>Footer</Footer>
+    </div>
+</body>
+</html>
