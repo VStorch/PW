@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 0.4fr 1fr;
+            gap: 10px;
+            padding: 10px;
+        }
+        .linha-cima {
+            display: grid;
+            grid-template-columns: 2fr 0.5fr 1fr;
+            gap: 10px;
+        }
+        .linha-baixo {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+        }
+        .fundo {
+            background-color: dimgray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 4px;
+        }
+        #D {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            padding: 10px;
+        }
+        .dentro {
+            background-color: lightgray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 18px;
+            margin-right: 18px;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 4px;
+            color: dimgray;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="linha-cima">
+        <div class="fundo" id="A">A</div>
+        <div></div>
+        <div class="fundo" id="B">B</div>
+    </div>
+    <div class="linha-baixo">
+        <div class="fundo" id="C">C</div>
+        <div class="fundo" id="D">
+            <div class="dentro" id="E">E</div>
+            <div class="dentro" id="F">F</div>
+            <div class="dentro" id="G">G</div>
+            <div class="dentro" id="M">M</div>
+            <div class="dentro" id="I">I</div>
+            <div class="dentro" id="J">J</div>
+        </div>
+    </div>
+</body>
+</html>
