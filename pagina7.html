@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box, .container{
+            border: 1px solid green;
+        }
+        .container {
+            height: 50vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <p>Até 2008 os mecanismos de posicionamento existentes no CSS eram o fluxo do html, float e positions, mas em 2007 se popularizaram os dispositivos móveis. Para possibilitar uma maior responsividade, o CSS 3 trouxe alguns recursos como Screen Media, que permite definir um conjunto de regras diferentes com base no tamanho da tela do usuário, e também a propriedade display:flex, que especifica o mecanismo FlexBox de posicionamento dos elementos HTML</p>
+
+    <p>Para definir um componente como um container flex, basta definir o display:flex</p>
+    <pre>
+        &lt;style&gt;
+            .container{display:flex}
+        &lt;/style&gt;
+
+        &lt; div class=".container" &gt;
+            ....
+        &lt;div &gt;
+    </pre>
+
+    <ul class="box">
+        <li class="container">1</li>
+        <li class="container">2</li>
+        <li class="container">3</li>
+        <li class="container">4</li>
+        <li class="container">5</li>
+    </ul>
+
+</body>
+</html>
