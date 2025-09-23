@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: grid;
+        }
         header, #right {
             background-color: gold;
         }
@@ -17,22 +24,51 @@
         #banner {
             background-color: lightcoral;
         }
-        
+
+
+        body {
+            display: grid;
+            grid-area:
+            "h h h"
+            "l c r"
+            "f f f";
+            grid-template-columns: 1fr 2fr 1fr;
+        }
+        header, footer {
+            height: 100px;
+            padding: 20px;
+        }
+        header {
+            grid: h;
+        }
+        #left {
+            grid: l;
+        }
+        #centro {
+            grid: c;
+        }
+        #right {
+            grid: r;
+        }
+        footer {
+            grid: f;
+        }
+
         @media screen and (max-width: 437px) and (max-height: 873px) {
             
         }
-        @media screen and (min-width: 438px) and (max-height: 874px){
-            
+        @media screen and (min-width: 438px) and (min-height: 874px){
+
         }
     </style>
 </head>
 <body>
     <header>Header</header>
-    <div>
+    <div id="left">Left Aside</div>
+    <div id="right">Right Aside</div>
+    <div id="centro">
         <div id="banner">Banner</div>
-        <div id="left">Left Aside</div>
         <div id="main">Main Content</div>
-        <div id="right">Right Aside</div>
         <div id="low">Low Content</div>
     </div>
     <Footer>Footer</Footer>
