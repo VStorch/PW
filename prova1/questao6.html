@@ -9,24 +9,44 @@
             margin: 0;
             padding: 0;
         }
-        body {
-            width: 100vh;
-            height: 100vh;
-            margin: 10px;
+        #layout {
+            height: 100dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            background-color: antiquewhite;
         }
-        div {
-            display: inline;
-            width: 200px;
-            padding: 200px;
-            background-color: aquamarine;
+        .bandeiras {
+            height: 20dvh;
+            width: 35dvh;
+            position: relative;
+            border: 1px solid black;
+        }
+        #b1 {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #sol {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            background-color: red;
+        }
+        #b2 {
+            display: grid;
         }
     </style>
 </head>
 <body>
-    <div class="band" id="b1">
-        <div id="sol">1</div>
+    <div id="layout">
+        <div class="bandeiras" id="b1">
+            <div id="sol"></div>
+        </div>
+        <div class="bandeiras" id="b2"></div>
+        <div class="bandeiras" id="b3">1</div>
     </div>
-    <div class="band" id="b2">1</div>
-    <div class="band" id="b3">1</div>
 </body>
 </html>
