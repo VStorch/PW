@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    <input type="text" id="nome">
+    <input type="number" id="peso" step="0.1">
+    <input type="number" id="altura" step="0.01">
+    <button>Calcular</button>
+    <p id="resultadoIMC"></p>
+    <p id="classificacao"></p>
+    <img id="imgPerfil">
+    
+    <script>
+        let nomeI = document.querySelector("#nome")
+        let pesoI = document.querySelector("#peso")
+        let alturaI = document.querySelector("#altura")
+        let buttonI = document.querySelector("button")
+
+        let nome = nomeI.value;
+        let peso = pesoI.value;
+        let altura = alturaI.value;
+
+        console.log(typeof(peso))
+        console.log(typeof(altura))
+
+        addEventListener
+        buttonI.addEventListener("click", () => {
+            if (nome.trim() === "") {
+                alert("Preencha o campo nome corretamente")
+                nome.innerText = " "
+            }
+        })
+
+
+
+    </script>
+</body>
+</html>
