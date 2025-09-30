@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let n = prompt("Digite o número de parágrafos que você deseja")
+        
+        numP = parseInt(n)
+
+        for (let i = 0; i < numP; i++) {
+            let p = document.createElement("p")
+            p.innerText= (i+1)
+            p.style.border = "1px solid black"
+            document.body.appendChild(p)
+        }
+
+        document.body.style.display="flex"
+        document.body.style.flexDirection="row"
+        document.body.style.flexWrap="wrap"
+        document.body.style.alignItems="center"
+
+
+
+    </script>
+</body>
+</html>
