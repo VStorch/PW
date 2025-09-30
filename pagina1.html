@@ -11,6 +11,8 @@
         // Código JS
         // alert("Olá mundo!")
 
+        var j = 0;
+
         var i = 0;
         console.log(i)
         console.log(typeof(i))
@@ -23,15 +25,24 @@
         button.id="btn"
         button.innerText="Entrar"
 
+        paragrafo=document.createElement("p")
+        paragrafo.style.backgroundColor="gray"
+        paragrafo.id="p"
+        paragrafo.innerText=j
+
         document.body.appendChild(button)
+        document.body.appendChild(paragrafo)
 
         document.body.style.height="100vh"
         document.body.style.display="flex"
         document.body.style.justifyContent="center"
         document.body.style.alignItems="center"
+        document.body.style.flexDirection="column"
+
+
         addEventListener
         button.addEventListener("click", () => {
-            alert("Você clicou no botão")
+            paragrafo.innerText = j ++;
         })
 
     </script>
