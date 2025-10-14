@@ -14,11 +14,33 @@
         let estudante = true; // Boolean
         let endereco; // Undefined
         let cpf = null; // Null
-        if (cpf === undefined) {
-            
+        if (cpf === null) {
+            console.log("O CPF é nulo");
+        } else {
+            console.log("O cpf tem valor");
         }
+        
+        // Object
+        let pessoa={}
+        pessoa.nome = "João"
+        pessoa.idade = "1.84"
+        console.log(pessoa)
+        console.log(pessoa.nome)
 
-        // Object, Array e Function
+        // Array JS
+        let alunos=['Arthur','João', 'Maria'];
+        let idades=[]
+        idades[0]=10
+        idades.push=24
+
+        alunos.forEach((aluno, i) => {
+            console.log(i+ " " + aluno)
+            // Código a ser executado
+        })
+
+        // Captura de eventos
+        
+
     </script>
 </body>
 </html>
