@@ -19,20 +19,44 @@
         let pesoI = document.querySelector("#peso")
         let alturaI = document.querySelector("#altura")
         let buttonI = document.querySelector("button")
+        let imcI = document.querySelector("#resultadoIMC")
+        let imgI = document.querySelector("#imgPerfil")
 
-        let nome = nomeI.value;
-        let peso = pesoI.value;
-        let altura = alturaI.value;
-
-        console.log(typeof(peso))
-        console.log(typeof(altura))
-
-        addEventListener
         buttonI.addEventListener("click", () => {
-            if (nome.trim() === "") {
+            let nome = nomeI.value;
+            let peso = pesoI.value;
+            let altura = alturaI.value;
+
+            if (nome.trim() == "") {
                 alert("Preencha o campo nome corretamente")
-                nome.innerText = " "
             }
+            if (peso.trim() == "") {
+                alert("Preencha o campo peso corretamente")
+            }
+            if (altura.trim() == "") {
+                alert("Preencha o campo altura corretamente")
+            }
+
+            let imc = peso / (altura * altura);
+
+            imcI.innerText = imc;
+
+            if (imc < 18.5) {
+                imgI.src = "img/abaixobeso.png"
+            }
+            else if (imc >= 18.5 || imc < 24.9) {
+                imgI.src = "img/normal.png"
+            }
+            else if (imc >= 24.9 || imc < 29.9) {
+                imgI.src = "img/sobrepeso.png"
+            }
+            else if (imc >= 29.9 || imc < 34.9) {
+                imgI.src = "img/obesidade1.png"
+            }
+            else if (imc >= 34.9 || imc < 39.9) {
+
+            }
+
         })
 
 
