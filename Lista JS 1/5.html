@@ -7,5 +7,25 @@
 </head>
 <body>
     <h1>Sorteio de Números</h1>
+
+    <input type="text" id="v1">
+
+    <input type="text" id="v2"><br><br>
+
+    <button>Sortear</button>
+
+    <p id="Resultado">Resultado</p>
+    
+    <script>
+        const v1 = document.querySelector('#v1').value;
+        const v2 = document.querySelector('#v2').value;
+
+        function sortear(v1, v2) {
+            v1 = Math.ceil(v1)
+            v2 = Math.floor(v2)
+            return Math.floor(Math.random() * (v2 - v1 + 1)) + v1
+        }
+
+    </script>
 </body>
 </html>
