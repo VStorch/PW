@@ -41,7 +41,7 @@
 
             let imc = peso / (altura * altura);
 
-            imcI.innerText = imc;
+            imcI.innerText = imc.toFixed(2);
 
             if (imc < 18.5) {
                 imgI.src = "img/abaixopeso.png"
