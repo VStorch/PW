@@ -14,17 +14,25 @@
 
     <button>Sortear</button>
 
-    <p id="Resultado">Resultado</p>
+    <p id="resultado">Resultado</p>
     
     <script>
-        const v1 = document.querySelector('#v1').value;
-        const v2 = document.querySelector('#v2').value;
+
+        let p = document.querySelector('#resultado')
+        let btn = document.querySelector('button')
 
         function sortear(v1, v2) {
             v1 = Math.ceil(v1)
             v2 = Math.floor(v2)
             return Math.floor(Math.random() * (v2 - v1 + 1)) + v1
         }
+
+        btn.addEventListener("click", () => {
+            const v1 = parseInt(document.querySelector('#v1').value)
+            const v2 = parseInt(document.querySelector('#v2').value);
+            
+            p.textContent = sortear(v1, v2);
+        })
 
     </script>
 </body>
