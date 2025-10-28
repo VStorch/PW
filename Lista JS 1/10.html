@@ -6,7 +6,9 @@
     <title>Calculadora</title>
 </head>
 <body>
-    <div class="tela"></div>
+    <div class="tela">
+        <h1 id="numero"></h1>
+    </div>
     <div class="botoes">
         <button class="but dig" id="dig1">1</button>
         <button class="but dig" id="dig2">2</button>
@@ -17,6 +19,7 @@
         <button class="but dig" id="dig7">7</button>
         <button class="but dig" id="dig8">8</button>
         <button class="but dig" id="dig9">9</button>
+        <button class="but dig" id="dig0">0</button>
         <button class="but dig" id="opsum">+</button>
         <button class="but dig" id="opsub">-</button>
         <button class="but dig" id="opmult">*</button>
@@ -29,8 +32,12 @@
         let numeroAtual
         let operacao
 
+        function adicionarNum() {
+            numeroAtual += numero
+            document.getElementById('numero').innerHTML = numero
+        }
         function calcular() {
-
+            
         }
     </script>
 </body>
