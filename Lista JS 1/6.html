@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Primos em Intervalo</title>
+</head>
+<body>
+    <input type="number" id="inicio">
+    <input type="number" id="fim">
+    <button>Verificar</button>
+    <div id="resultadoPrimos"></div>
+
+    <script>
+        let btn = document.querySelector('button')
+
+        function ehPrimo(n) {
+
+            if (n < 2) {
+                return false
+            }
+
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) {
+                    return false
+                }
+            }
+            return true
+        }
+
+        btn.addEventListener('click', () => {
+            document.getElementById('resultadoPrimos').innerHTML = ""
+
+            const inicio = parseInt(document.querySelector('#inicio').value)
+            const fim = parseInt(document.querySelector('#fim').value)
+
+            if (inicio <= fim) {
+
+                for (let i = inicio; i < fim; i++) {
+                    if (ehPrimo(i) === true) {
+                        document.getElementById('resultadoPrimos').innerHTML += i +"<br>";
+                    }
+                }
+            } else {
+                alert('Primeiro campo deve ser menor que o segundo')
+            }
+        })
+    </script>
+</body>
+</html>
