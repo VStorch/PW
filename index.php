@@ -19,5 +19,19 @@
         echo "<p>".$a+$b."</p>";
     ?>
     <p> <?php echo $a*$b ?></p>
+    <h2>Operadores ternários</h2>
+    <?php
+        $nota = 9.9;
+        $situacao = $nota >= 6 ? 'aprovado' : 'reprovado';
+        echo $situacao;
+    ?>
+    <h2>While</h2>
+    <?php
+        $i = 0;
+        while($i < 10) {
+            $i++;
+            echo "i = ".$i."<br>";
+        }
+    ?>
 </body>
 </html>
