@@ -33,5 +33,27 @@
             echo "i = ".$i."<br>";
         }
     ?>
+    <h2>Arrays em PHP</h2>
+    <?php
+        $vetor = array(20, 19, 22, 19, 23);
+        for ($posicao = 0; $posicao < count($vetor); $posicao++) {
+            echo $vetor[$posicao] . '<br>';
+        }
+
+        foreach($vetor as $elemento) {
+            echo "Elemento: " . $elemento . "<br>";
+        }
+    ?>
+    <h3>Vetor com índice alfabético</h3>
+    <?php
+        $vetor = array(
+            'nome' => 'Guilherme',
+            'sobrenome' => 'Silva',
+            'cpf' => '123.456.789-00'
+        );
+        echo 'Nome: ' . $vetor['nome'] . '<br>';
+        echo 'Sobrenome: ' . $vetor['sobrenome'] . '<br>';
+        echo 'CPF: ' . $vetor['cpf'] . '<br>';
+    ?>
 </body>
 </html>
