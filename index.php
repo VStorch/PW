@@ -8,8 +8,9 @@
 <body>
     Minha página HTML
     <?php
-        echo "Olá mundo!";
-        
+        echo "<br>"."Olá mundo!<br>";
+        $nome = "Romulo Beninca";
+        echo $nome."<br>";
     ?>
 </body>
 </html>
