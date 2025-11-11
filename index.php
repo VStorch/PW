@@ -55,5 +55,10 @@
         echo 'Sobrenome: ' . $vetor['sobrenome'] . '<br>';
         echo 'CPF: ' . $vetor['cpf'] . '<br>';
     ?>
+    <h2>Variáveis de ambiente em PHP</h2>
+    <?php
+        echo "GET: " . $_GET['nome'] . "<br>";
+        echo "SERVER: " . var_dump($_SERVER);
+    ?>
 </body>
 </html>
