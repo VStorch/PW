@@ -7,6 +7,8 @@
 </head>
 <body>
     <h2>Formulário de Cadastro</h2>
+
+<!-- Get vai no cabeçalho, post não -->
     <form action="imc.php" method="get">
         <label for="iname">Nome</label>
         <input type="text" id="iname" name="nome">
