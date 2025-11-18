@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,17 @@
 </head>
 <body>
     <?php
+        if (isset($_SESSION['username'])) {
+            echo "<p>Usuário logado: " . $_SESSION['username'] . "</p>";
+        } else {
+            header("Location: login.php?error=nao_autenticado");
+            exit();
+        }
+        if (isset($_GET['nome'])) {
+            $_SESSION['nome'] = $_GET['nome'];
+            echo "<h2>Bem vindo, " . $_SESSION['nome'] . "";
+        }
+
         if (isset($_GET['error']) && $_GET['error'] == 'faltando_dados') {
             echo "<p style='color:red'> Erro: Por favor, preencha todos os campos.</p>";
         }
