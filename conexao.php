@@ -49,4 +49,22 @@
     }
 
     // update_usuario(7, "Daniel", "daniel", "54321");
+
+    // get usuario
+    function get_usuario($id) {
+        $con = conecta_bd();
+        $stmt = $con -> prepare("SELECT * FROM usuarios WHERE id = :id");
+        $stmt -> bindParam(':id', $id);
+        $stmt -> execute();
+        return $stmt -> fetch(PDO::FETCH_ASSOC);
+    }
+
+    // echo var_dump(get_usuario(7));
+
+    function get_usuarios() {
+        $con = conecta_bd();
+        $stmt = $con -> prepare("SELECT * FROM usuarios");
+        $stmt -> execute();
+        return $stmt -> fetch(PDO::FETCH_ASSOC);
+    }
 ?>
