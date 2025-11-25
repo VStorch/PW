@@ -68,8 +68,8 @@
         return $stmt -> fetchAll(PDO::FETCH_ASSOC);
     }
 
-    echo "<pre>";
-    var_dump(get_usuarios());
-    echo "</pre>";
+    // echo "<pre>";
+    // var_dump(get_usuarios());
+    // echo "</pre>";
 
 ?>
