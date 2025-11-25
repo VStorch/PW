@@ -31,5 +31,22 @@
         $stmt -> bindParam(':id', $id);
         return $stmt -> execute();
     }
+
     delete_usuario(1);
+
+    //for ($i=1; $i <= 10; i++)
+    //    delete_usuario($i);
+
+    // update usuário
+    function update_usuario($id, $nome, $login, $senha) {
+        $con = conecta_bd();
+        $stmt = $con -> prepare("UPDATE usuarios SET nome = :nome, login = :login, senha = :senha WHERE id = :id");
+        $stmt -> bindParam(':id', $id);
+        $stmt->bindParam(':nome', $nome);
+        $stmt->bindParam(':login', $login);
+        $stmt->bindParam(':senha', $senha);
+        return $stmt -> execute();
+    }
+
+    // update_usuario(7, "Daniel", "daniel", "54321");
 ?>
