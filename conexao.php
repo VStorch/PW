@@ -65,6 +65,11 @@
         $con = conecta_bd();
         $stmt = $con -> prepare("SELECT * FROM usuarios");
         $stmt -> execute();
-        return $stmt -> fetch(PDO::FETCH_ASSOC);
+        return $stmt -> fetchAll(PDO::FETCH_ASSOC);
     }
+
+    echo "<pre>";
+    var_dump(get_usuarios());
+    echo "</pre>";
+
 ?>
